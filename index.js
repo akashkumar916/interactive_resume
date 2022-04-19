@@ -450,7 +450,7 @@ function create(){
 
 	game.add.sprite(13400,h-410,'facebook').scale.setTo(0.6,0.6);
 	
-	game.add.sprite(13800,h-410,'hackathon').scale.setTo(0.5,0.5);
+	game.add.sprite(13800,h-440,'hackathon').scale.setTo(0.5,0.5);
 
 
 
@@ -522,7 +522,7 @@ function create(){
 	digital_india.animations.play('run',5,true);
 	game.add.text(base5+2500,h-480,"Google Explore \n ML Program:\n One of the 120 selected ",{font:"28px Arial",fill:"#fff",align:"center"});
 	
-	game.add.sprite(base5+3200,h-350,'building');
+	game.add.sprite(base5+3200,h-390,'building');
 	game.add.text(base5+3250,h-470,"Winner \nSmart India Hackathon \nat HYD (2019)",{font:"28px Arial",fill:"#fff",align:"center"});
 
 	game.add.sprite(base5+3820,h-310,'icpc');
@@ -613,13 +613,13 @@ function create(){
 	button_hackerearth = game.add.button(20000,h-600,'gfg',openHackerearth, this);
 	*/
 	//Add hometown
-	var hometown = game.add.sprite(1700,h-440,'hometown');
+	var hometown = game.add.sprite(1700,h-490,'hometown');
 
 	//Add fullstack
 	game.add.sprite(5900,h-360,'developer');
 
 	//Add College building
-	game.add.sprite(3800,h-580,'lpu').scale.setTo(0.75,0.75);
+	game.add.sprite(3800,h-610,'lpu').scale.setTo(0.75,0.75);
 	aieee_cup=game.add.sprite(3500,-500,'cup');
 	//game.add.text(3850,h-105,"  Undergrad in CSE- 8.23/10",style_roboto);
 	
@@ -629,12 +629,12 @@ function create(){
 	
 	//Add bubble
 	
-	bubble = game.add.sprite(8800,h+350,'sea1');
+	bubble = game.add.sprite(8900,h+350,'sea1');
 	bubble1 = game.add.sprite(9100,h+350,'sea2');
-	bubble2 = game.add.sprite(9400,h+350,'sea3');
-	bubble3 = game.add.sprite(8800,h+150,'sea4');
+	bubble2 = game.add.sprite(9300,h+350,'sea3');
+	bubble3 = game.add.sprite(8900,h+150,'sea4');
 	bubble4 = game.add.sprite(9100,h+150,'sea5');
-	bubble5 = game.add.sprite(9400,h+150,'sea6');
+	bubble5 = game.add.sprite(9300,h+150,'sea6');
 
 	game.add.text(8990,h+560,"Others Tools and Frameworks",style_roboto);
 	
@@ -1301,9 +1301,6 @@ function loadStart() {
 	text.anchor.setTo(0.5,0.5);
 	text.setText("Loading ...");
 
-	console.log("File complete...");
-
-	console.log("Called Log Start !");
 }
 
 //	This callback is sent the following parameters:

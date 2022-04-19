@@ -74,7 +74,7 @@ var game = new Phaser.Game(w,h,Phaser.CANVAS,'canvas',{preload:preload,create:cr
 var orange = "#FF7519";
 var debug=false;
 var hero;
-var cursors;
+var cursors
 var tree1;
 var plant1;
 var ct1,ct2,ct3,ct4;
@@ -188,15 +188,11 @@ function preload(){
 	game.load.image('shephertz','assets/shephertz.png');
 	game.load.image('codelhi','assets/codelhi.png');
 	game.load.image('maui','assets/img/maui.png');
-	game.load.image('chai','assets/cpc.png');
-	game.load.image('football','assets/football.png');
 	game.load.image('gmail','assets/gmail.png');
 	game.load.image('facebook','assets/fb.png');
 	game.load.image('linkedin','assets/linkedin.png');
 	game.load.image('hackerearth','assets/img/hackerearth.png');
 	game.load.image('ladder','assets/ladder.png');
-	game.load.image('yoga','assets/yoga.png');
-	game.load.image('swach_bharat','assets/swach_bharat.png');
 	game.load.image('github','assets/github.png');	
 	game.load.image('leetcode','assets/img/leetcode.png');
 	game.load.image('medium','assets/img/medium.png');
@@ -563,18 +559,6 @@ function create(){
 	game.add.sprite(base5+1630,h-465,'code1');
 	//game.add.text(base5+1580,h-250,"1st in Code Alchemist \nCoding\n Challenge",style_position);
 
-	
-
-	 //cup3=game.add.sprite(base5+2000,-410,'cup');
-	 //cup3.scale.setTo(0.8,0.8);
-	// game.add.sprite(base5+2060,h-410,'codelhi');
-	// game.add.text(base5+2080+50,h-310,"Hackathon",style_position);
-
-	// game.add.text(base5+2060,h-305+50,"1st in ",style_position);
-	// game.add.sprite(base5+2170,h-310+50,'shephertz');
-	// game.add.text(base5+2060,h-205+30,"1st in ",style_position);
-	// game.add.sprite(base5+2150,h-210+30,'gaana').scale.setTo(0.15,0.15);
-
 
 	//Add grari
 	grari = game.add.sprite(base5+2600,h-350,'grari');
@@ -906,13 +890,6 @@ function collisionHandler(bullet,tile){
 	
 	}
 	else if(explosion_count==5){
-	/*
-	var phaser= game.add.sprite(bv+3*inc,h-500,'phaser');
-	py.scale.setTo(0.2,0.2);
-	py.anchor.setTo(0.5,0.5);
-	game.add.tween(py).to({y:h-550},300).start();
-	game.add.tween(py.scale).to({y:0.6,x:0.6},500).start();
-	*/
 
 	var andro= game.add.sprite(bv+4*inc,h-500,'backend');
 	andro.scale.setTo(0.2,0.2);
