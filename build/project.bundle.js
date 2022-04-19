@@ -91,12 +91,11 @@ var football;
 var text;
 var medium_url="https://akash-kumar916.medium.com/";
 var hackerearth_url="https://www.hackerearth.com/@akash1043";
-var leetcode_url="https://www.linkedin.com/in/akash-kumar916/";
+var leetcode_url="https://leetcode.com/akash_kumar916/";
 var github_url="https://github.com/akashkumar916";
-var facebook_url="https://www.facebook.com/akashkumar";
-var linkedin_url="https://in.linkedin.com/in/akash-kumra916";
+var linkedin_url="https://linkedin.com/in/akash-kumra916";
 var resume_url="https://drive.google.com/file/u/1/d/1NvwPHNCfUPXlKTy51pPNpk3ZDD8YnnFt/view";
-var website_url="";
+var website_url="https://akash-kumar916.medium.com/";
 var gmail_url="";
 var inst_text;
 var bug;
@@ -106,7 +105,7 @@ var cloud_moving1;
 var cloud_moving2;
 var base5 = 15100;
 var base6 = 17500+1400;
-var base7 =17600+1400;
+var base7 =18100+1400;
 var platformLength = base7+2000;
 var cupTweenDone=false;
 var cupTweenSecondDone=false;
@@ -135,7 +134,6 @@ function preload(){
 	game.load.image('cloud','assets/cloud.png');
 	game.load.image('birds','assets/birds.png');
 	game.load.image('school','assets/img/school.png');
-	game.load.image('mainbanner','assets/interactive-resume.png');
 	game.load.image('building','assets/building.png');
 	game.load.image('florida','assets/img/florida.png');
 	game.load.image('hometown','assets/img/hometown.png');
@@ -147,15 +145,15 @@ function preload(){
 	game.load.image('lpu','assets/img/lpu.png');
 	game.load.image('level','assets/sign.png');
 	game.load.image('cocotree','assets/coco.png');
-	game.load.image('python','assets/python_white.png');
-	game.load.image('css','assets/cssn.png');
+	game.load.image('python','assets/code/python.png');
+	game.load.image('c++','assets/code/c++.png');
 	game.load.image('js','assets/js.png');
-	game.load.image('html','assets/html5.png');
-	game.load.image('night','assets/night.jpg');
+	game.load.image('java','assets/code/java.png');
+	game.load.image('night','assets/night8.jpeg');
 	//game.load.image('jquery','assets/jquery_white.png');
 	game.load.image('developer','assets/fullstackS.png');
 	//game.load.image('phaser','assets/phaserLogo.png');
-	game.load.image('android','assets/android.png');
+	game.load.image('backend','assets/code/backend1.png');
 
 	game.load.image('frog','assets/frog.png');
 	game.load.image('acko','assets/img/acko.png');
@@ -164,7 +162,13 @@ function preload(){
 //	game.load.image('campk12Logo','assets/img/amazon.png');
 	game.load.image('tekion','assets/img/tekion.png');
 	game.load.image('corel','assets/corel.png');
-	game.load.image('psbubble','assets/psbubble.png');
+	game.load.image('sea1','assets/sea/sea1.png');
+	game.load.image('sea2','assets/sea/sea2.png');
+	game.load.image('sea3','assets/sea/sea3.png');
+	game.load.image('sea4','assets/sea/sea4.png');
+	game.load.image('sea5','assets/sea/sea5.png');
+	game.load.image('sea6','assets/sea/sea7.png');
+
 	game.load.image('games','assets/img/cancer.png');
 	game.load.image('quiz','assets/img/quiz.png');
 	//game.load.image('photoshop','assets/pslogo.png');
@@ -189,6 +193,7 @@ function preload(){
 	game.load.image('gmail','assets/gmail.png');
 	game.load.image('facebook','assets/fb.png');
 	game.load.image('linkedin','assets/linkedin.png');
+	game.load.image('hackerearth','assets/img/hackerearth.png');
 	game.load.image('ladder','assets/ladder.png');
 	game.load.image('yoga','assets/yoga.png');
 	game.load.image('swach_bharat','assets/swach_bharat.png');
@@ -196,7 +201,7 @@ function preload(){
 	game.load.image('leetcode','assets/img/leetcode.png');
 	game.load.image('medium','assets/img/medium.png');
 	game.load.image('algae','assets/algae-b.png');
-	game.load.image('blogLogo','assets/icon_small.png');
+	game.load.image('blogLogo','assets/cartoon.png');
 	game.load.image('bug','assets/bug.png');
 	game.load.image('flag','assets/flag.png');
 	game.load.image('squarebrick','assets/brick_small.png');
@@ -208,11 +213,8 @@ function preload(){
 	game.load.atlasJSONHash('digital_india','assets/digital_india.png','assets/digital_india.json');	
 	game.load.image('waterBubble', 'assets/bubble256.png');
 	game.load.image('sun', 'assets/sun.png');
-	//game.load.image('waterBubble', 'assets/bubble256.png');
 	game.load.atlasXML('seacreatures', 'assets/seacreatures.png', 'assets/seacreatures.xml');
-   // game.load.image('undersea', 'assets/undersea.jpg');
 	game.load.spritesheet('kaboom', 'assets/explode.png', 128, 128);
-	//game.load.image('ground','assets/ground.png');
 
 }
 
@@ -285,13 +287,11 @@ function create(){
 
 	game.add.sprite(3060,h-350,'treeS');
 	hill1=game.add.sprite(2600,h-300+400,'hill');
-	
 	hill2=game.add.sprite(3000,h-350+400,'hill');
 
 	//hill3=game.add.sprite(3400,h-400+400,'hill');
 
 	
-
 	//Add Coco Trees
 	ct1  = game.add.sprite(5000,h,'cocotree');
 	ct2  = game.add.sprite(5200,h,'cocotree');
@@ -369,7 +369,7 @@ function create(){
 	//game.add.text(6600,h-160,'FULL STACK WEB DEVELOPER \t\t SERVER SIDE IN DJANGO\t\t GAME DEVELOPMENT\t\tANDROID\t\t  DESIGNING SKILLS >> \t\t\t\t\t PHOTOSHOP ',style_lang);	
 
 
-	game.add.sprite(base5+150,h-420,'tree1').scale.setTo(0.8,0.8);
+	//game.add.sprite(base5+150,h-420,'tree1').scale.setTo(0.8,0.8);
 	game.add.sprite(base5+300,h-250,'treeS').scale.setTo(0.7,0.7);
 	game.add.sprite(base6+250,h-420,'tree1').scale.setTo(0.8,0.8);
 	game.add.sprite(base6+200,h-250,'treeS').scale.setTo(0.7,0.7);
@@ -377,7 +377,7 @@ function create(){
 
 
 	var style = { font: "16px monospace", fill: "#fff", align: "center" };
-	game.add.text(2930,h-250,"Class 10th \n 8.8.0/10.0 CGPA \n School Topper", style);
+	game.add.text(2930,h-250,"Class 10th \n 8.8.0/10.0 CGPA ", style);
 	game.add.text(3330,h-280,"Class 12th \n 87.6 % marks \n CBSE Board ", style);
 //	game.add.text(3700,h-320,"School Captain ", style);
 	//Add Ground and Grass
@@ -405,16 +405,16 @@ function create(){
 	game.add.sprite(12750+350,h-100-36,'brick').scale.setTo(0.5,0.5);
 	game.add.sprite(12750+350,h-100,'brick').scale.setTo(0.5,0.5);
 	//game.add.sprite(12650,h-400,'treeS').alpha=0.8;
-	game.add.sprite(12850,h-300,'treeS').scale.setTo(0.75,0.75);
+	//game.add.sprite(12850,h-300,'treeS').scale.setTo(0.75,0.75);
 
-	var water2 = game.add.tileSprite(12750,h-100-36+10,700,320,'waterAtlas2');
-	water2.scale.setTo(0.5,0.5);
+	//var water2 = game.add.tileSprite(12750,h-100-36+10,700,320,'waterAtlas2');
+//	water2.scale.setTo(0.5,0.5);
 	//var water = game.add.sprite(100,300,'waterAtlas');
 	water.animations.add('run');
 	water.animations.play('run',2,true);
 	
-	water2.animations.add('run');
-	water2.animations.play('run',2,true);
+	//water2.animations.add('run');
+//	water2.animations.play('run',2,true);
 	
 	
 
@@ -468,9 +468,9 @@ function create(){
 	// game.add.text(base6+335,h-260,"Other Highlights",{font:"20px Arial Black"});
 
 
-	game.add.sprite(base7+200,h-440,'level');
-	game.add.text(base7+270,h-340,"Level 7");
-	game.add.text(base7+335,h-260,"Online Profiles",{font:"20px Arial Black"});
+	game.add.sprite(base6+500,h-440,'level');
+	game.add.text(base6+570,h-340,"Level 6");
+	game.add.text(base6+630,h-260,"Online Profiles",{font:"20px Arial Black"});
 
 	//-------------------Levels Finish
 
@@ -514,36 +514,30 @@ function create(){
 
 	//Add projects
 	game.add.sprite(12200,h-520,'games');
-	//game.add.text(12280,h-430,"Personalized Cancer \nDiagnosis Prediction\n Machine Learning Model",style_white);
 
 	game.add.sprite(12740,h-450,'quiz');
-	//game.add.text(12750,h-380,"QuickQuiz \n for HighSchool \n including different features",style_white);
 
-	game.add.sprite(12830,h-710,'facebook').scale.setTo(0.6,0.6);
-	game.add.sprite(13700,h-410,'hackathon').scale.setTo(0.6,0.6);
-	//game.add.sprite(13400,h-310,'bits');
-//	game.add.text(13300,h-430,"Facebook Friend Recommendation\npredict missing links \nto recommend friends",style_white);
+	game.add.sprite(13400,h-410,'facebook').scale.setTo(0.6,0.6);
+	
+	game.add.sprite(13800,h-410,'hackathon').scale.setTo(0.5,0.5);
 
-	// var pd = game.add.sprite(14150-100,h-360,'sandiskPd');
-	// pd.scale.setTo(1.4,1.4);
-	// pd.angle = 90;
-//	game.add.text(13800-100,h-300,"Geek Fiesta  \n Hackathon Website",style_white);
 
-	game.add.sprite(14100,h-370,'hospital');
-	var ambu = game.add.sprite(14200,h-260,'ambulance');
+
+	game.add.sprite(14400,h-370,'hospital');
+	var ambu = game.add.sprite(14700,h-260,'ambulance');
 	ambu.scale.setTo(0.8,0.8);
 	var t = game.add.tween(ambu).to( { x:14400,}, 2000, Phaser.Easing.Back.InOut, true, 0, 2000, true);
 	t.start();
-	game.add.text(14240,h-370,"SCAN-X Web Application \n to develop Smart\n Hospital Management",style_white);
+	game.add.text(14540,h-370,"SCAN-X Web Application \n to develop Smart\n Hospital Management",style_white);
 	
-	//SCAN-X Web Application \n to develop Smart Hospital Management \n and make one Centralised Server
-	game.add.sprite(14800,h-420,'otherprojects');
-	game.add.text(14850,h-450,"Other Projects",style_white);
+
+	//game.add.sprite(14800,h-420,'otherprojects');
+	//game.add.text(14850,h-450,"Other Projects",style_white);
 
 	//Add Achivements Section
 	game.add.tileSprite(base5+500,h-100-73*3,139*2,73*3,'brick');
-	shakti = game.add.sprite(base5+700,-770,'maui');
-	//shakti.scale.setTo(0.6,0.6);
+	shakti = game.add.sprite(base5+700,-670,'maui');
+	//shakti.scale.setTo(0.7,0.7);
 	shakti_cup = game.add.sprite(base5+500,-500,'cup');
 	shakti_cup.scale.setTo(0.5,0.5);
 	game.add.text(base5+505,h-300,"Secured AIR\n of 1895 out of 200k in\n TCS Code Vita 2020.",style_white);
@@ -553,20 +547,26 @@ function create(){
 	//game.add.sprite(15715,h-410,'best').scale.setTo(0.8,0.8);
 	//Positon style
 	var style_position = { font:"24px monospace",fill:"#fff",align:"center"};
-	cup1 = game.add.sprite(base5+820+200,-280,'cup');
-	cup1.scale.setTo(0.6,0.6);
-	game.add.sprite(base5+980,h-690,'incubation');
+	
+	game.add.sprite(base5+1020,h-600,'incubation');
 	//game.add.text(base5+1180,h-250,"",style_position);
 
-	
-	cup2=game.add.sprite(base5+1400,-340,'cup');
-	cup2.scale.setTo(0.8,0.8);
+	cup1 = game.add.sprite(base5+900,h-250,'cup').scale.setTo(0.5,0.5);
+	cup2 = game.add.sprite(base5+1410,h-280,'cup').scale.setTo(0.6,0.6);
+	cup3 = game.add.sprite(base5+2220,h-320,'cup').scale.setTo(0.7,0.7);;
+	cup4 = game.add.sprite(base5+3000,h-350,'cup').scale.setTo(0.8,0.8);
+	cup5 = game.add.sprite(base5+3600,h-360,'cup').scale.setTo(0.8,0.8);
+
+
+
+
 	game.add.sprite(base5+1630,h-465,'code1');
 	//game.add.text(base5+1580,h-250,"1st in Code Alchemist \nCoding\n Challenge",style_position);
 
 	
 
-	 cup3=game.add.sprite(base5+2000,-410,'cup');
+	 //cup3=game.add.sprite(base5+2000,-410,'cup');
+	 //cup3.scale.setTo(0.8,0.8);
 	// game.add.sprite(base5+2060,h-410,'codelhi');
 	// game.add.text(base5+2080+50,h-310,"Hackathon",style_position);
 
@@ -586,30 +586,25 @@ function create(){
 	grari2.animations.play('run',2,true);
 
 	//Add digital India
-	digital_india = game.add.sprite(base5+2700,h-260,'digital_india');
+	digital_india = game.add.sprite(base5+2550,h-260,'digital_india');
 	digital_india.animations.add('run');
 	digital_india.animations.play('run',5,true);
-	game.add.text(base5+2650,h-480,"Google Explore \n ML Program:\n One of the 120 selected ",{font:"28px Arial",fill:"#fff",align:"center"});
+	game.add.text(base5+2500,h-480,"Google Explore \n ML Program:\n One of the 120 selected ",{font:"28px Arial",fill:"#fff",align:"center"});
 	
-	cup4=game.add.sprite(base5+2420,-410,'cup');
-
-	cup5=game.add.sprite(base5+3000,h-400,'cup');
-
-	cup5=game.add.sprite(base5+3200,h-350,'building').scale.setTo(0.5,0.5);
-	
+	game.add.sprite(base5+3200,h-350,'building');
 	game.add.text(base5+3250,h-470,"Winner \nSmart India Hackathon \nat HYD (2019)",{font:"28px Arial",fill:"#fff",align:"center"});
 
-	game.add.sprite(base5+3670,h-310,'icpc');
-	game.add.text(base5+3650,h-470,"Qualified for \nACM-ICPC \n2019",{font:"28px Arial",fill:"#fff",align:"center"});
+	game.add.sprite(base5+3820,h-310,'icpc');
+	game.add.text(base5+3800,h-470,"Qualified for \nACM-ICPC \n2019",{font:"30px Arial",fill:"#fff",align:"center"});
 
 	//Add other highlights
 	//game.add.sprite(base6+600,h-240,'chai');
-//	game.add.text(base6+600,h-330,"Host:Chai Pe Charcha \n with NaMO & 'Mere \nSapno Ka Bharat'.",style_white);
-	
-	
-	game.add.text(base6+900,h-430,"Sports Lover",style_white);
+	//game.add.text(base6+600,h-330,"Host:Chai Pe Charcha \n with NaMO & 'Mere \nSapno Ka Bharat'.",style_white);
+	//shakti2 = game.add.sprite(base6+930,-500,'pshaktiman');
+	//shakti2.scale.setTo(0.75,0.75);
+	//game.add.text(base6+900,h-430,"Sports Lover",style_white);
 	//football=game.add.sprite(base6+900,h-200,'football');
-	game.add.tween(football).to( {y:h-300 }, 400, Phaser.Easing.Back.InOut, true, 0, 400, true);
+	//game.add.tween(football).to( {y:h-300 }, 400, Phaser.Easing.Back.InOut, true, 0, 400, true);
 
 	
 	//game.add.sprite(base6+1200-30,h-550,'tree1');
@@ -621,12 +616,12 @@ function create(){
 
 	
 	//Add Contact Buttons
-	game.add.sprite(base7+800,h-400,'ladder');
+	game.add.sprite(base7+600,h-400,'ladder');
 	
 	var cloud_blog =game.add.sprite(base7+550,h-700+20,'sun');	
 	cloud_blog.scale.setTo(1.3,1.3);
 	
-	game.add.button(base7+820,h-650+20,'blogLogo',openWebsite,this);
+	game.add.button(base7+620,h-650+20,'blogLogo',openWebsite,this);
 	//game.add.text(base7+650,h-550+20,"Blog",{font:"40px Arial" ,fill:"#fff"});
 	cloud_moving1 = game.add.sprite(base7+510,h-650,'cloud');
 	cloud_moving2 = game.add.sprite(base7+510-60,h-650,'cloud');
@@ -640,12 +635,12 @@ function create(){
 	button_github.scale.setTo(0.20,0.20);
 	
 	game.add.sprite(base7+800,h-550,'cloud').alpha=0.8;
-	button_fb = game.add.button(base7+860,h-520,'facebook',openFacebook,this);
+	//button_fb = game.add.button(base7+860,h-520,'facebook',openFacebook,this);
 	
 	var hackerearth_cloud=game.add.sprite(base7+650+30,h-350+15,'cloud');
 	hackerearth_cloud.scale.setTo(1.1,1.1);
 
-	button_hackerearth = game.add.button(base7+700+30,h-310+15,'gfg',openHackerearth, this);
+	button_hackerearth = game.add.button(base7+700+30,h-310+15,'hackerearth',openHackerearth, this);
 	button_hackerearth.scale.setTo(0.5,0.5);
 	
 	var gmail_cloud=game.add.sprite(base7+670,h-440,'cloud');
@@ -673,9 +668,9 @@ function create(){
 	button_linkedin = game.add.button(base7+990,h-450,'linkedin',openLinkedIn, this);
 	button_linkedin.scale.setTo(0.8,0.8);
 	
-	game.add.text(base7+920,h-110,"Click /Tap the Clouds to open Profiles and Publications.",style_white);
+	game.add.text(base7+720,h-105,"Click/Tap the Clouds to open Profiles and Publications.",style_white);
 	
-	game.add.button(base7+1460,h-450+20,'publication',openPublication,this);
+	game.add.button(base7+1260,h-450+20,'publication',openPublication,this);
 
 	//scale.setTo(0.15,0.15);
 
@@ -687,7 +682,7 @@ function create(){
 	button_hackerearth = game.add.button(20000,h-600,'gfg',openHackerearth, this);
 	*/
 	//Add hometown
-	var hometown = game.add.sprite(1600,h-440,'hometown');
+	var hometown = game.add.sprite(1700,h-440,'hometown');
 
 	//Add fullstack
 	game.add.sprite(5900,h-360,'developer');
@@ -697,19 +692,26 @@ function create(){
 	aieee_cup=game.add.sprite(3500,-500,'cup');
 	//game.add.text(3850,h-105,"  Undergrad in CSE- 8.23/10",style_roboto);
 	
-	game.add.sprite(4300,h-612,'florida').scale.setTo(0.75,0.75);
+	game.add.sprite(4200,h-612,'florida').scale.setTo(0.75,0.75);
 	aieee_cup=game.add.sprite(3500,-500,'cup');
 //	game.add.text(4400,h-105," Master in Computer Science",style_roboto);
 	
 	//Add bubble
 	
-	bubble = game.add.sprite(9100,h+450,'psbubble');
-	game.add.text(8900,h+500,"Designing Skills - Photoshop,CorelDraw",style_roboto);
-	
-	bubble.scale.setTo(0.5,0.5);
-	bubble.alpha =0.8;
+	bubble = game.add.sprite(8800,h+350,'sea1');
+	bubble1 = game.add.sprite(9100,h+350,'sea2');
+	bubble2 = game.add.sprite(9400,h+350,'sea3');
+	bubble3 = game.add.sprite(8800,h+150,'sea4');
+	bubble4 = game.add.sprite(9100,h+150,'sea5');
+	bubble5 = game.add.sprite(9400,h+150,'sea6');
 
-	inst_text = game.add.text(290,h-50,"Use  Arrow Keys  OR << Screen Buttons >> ",{font:"30px Arial",fill:"#fff"});
+	game.add.text(8990,h+560,"Others Tools and Frameworks",style_roboto);
+	
+
+	//bubble.scale.setTo(0.5,0.5);
+	//bubble.alpha =0.8;
+
+	inst_text = game.add.text(290,h-50,"Use Arrow Keys/Screen keys >>",{font:"27px Arial",fill:"#fff"});
 	//Add hero 
 	hero = game.add.sprite(100,-500,'akash');
 	hero.animations.add('run');
@@ -737,9 +739,9 @@ function create(){
     crab2.animations.add('swim', Phaser.Animation.generateFrameNames('crab1', 0, 25, '', 4), 30, true);
     crab2.animations.play('swim');
 
-    seahorse = game.add.sprite(9300, h+200, 'seacreatures');
-    seahorse.animations.add('swim', Phaser.Animation.generateFrameNames('seahorse', 0, 5, '', 4), 30, true);
-    seahorse.animations.play('swim');
+    // seahorse = game.add.sprite(9300, h+200, 'seacreatures');
+    // seahorse.animations.add('swim', Phaser.Animation.generateFrameNames('seahorse', 0, 5, '', 4), 30, true);
+    // seahorse.animations.play('swim');
 
 
     purpleFish = game.add.sprite(12950,h-80, 'seacreatures');
@@ -748,10 +750,10 @@ function create(){
     game.add.tween(purpleFish).to({ x:12750}, 7500, Phaser.Easing.Quadratic.InOut, true, 0, 1000, false);
 
 
-    stingray = game.add.sprite(8900, h+90, 'seacreatures');
+    // stingray = game.add.sprite(8900, h+90, 'seacreatures');
 
-    stingray.animations.add('swim', Phaser.Animation.generateFrameNames('stingray', 0, 23, '', 4), 30, true);
-    stingray.animations.play('swim');
+    // stingray.animations.add('swim', Phaser.Animation.generateFrameNames('stingray', 0, 23, '', 4), 30, true);
+    // stingray.animations.play('swim');
    /* 	
     jellyfish = game.add.sprite(9100, h+20, 'seacreatures');
     jellyfish.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
@@ -809,7 +811,7 @@ function create(){
 	download_btn.fixedToCamera = true;
 	game.add.text(w-120,100,"Download PDF",{font:"10px Roboto",fill:"#000"}).fixedToCamera=true;
 	night_tween = game.add.tween(night);
-	night_tween.to({ alpha:0}, 10000)
+	night_tween.to({ alpha:0.5}, 10000)
 		//, Phaser.Easing.Quadratic.InOut, true, 0, 5000, true);
 	//back_btn.onTap.add(moveBack,this);
 	//Visible only for mobile screens
@@ -853,7 +855,7 @@ function collisionHandler(bullet,tile){
     var inc = 119*2;
 
     if(explosion_count==1){
-		var css = game.add.sprite(bv,h-400,'css');
+		var css = game.add.sprite(bv,h-400,'c++');
 		css.scale.setTo(0.5,0.5);
 		css.anchor.setTo(0.5,0.5);
 		game.add.tween(css).to({y:h-550},300).start();
@@ -864,7 +866,7 @@ function collisionHandler(bullet,tile){
 
 	}
 	else if(explosion_count==2){
-	var html= game.add.sprite(bv+1*inc,h-500,'html');
+	var html= game.add.sprite(bv+1*inc,h-500,'java');
 		html.scale.setTo(0.5,0.5);
 		html.anchor.setTo(0.5,0.5);
 		game.add.tween(html).to({y:h-550},300).start();
@@ -912,7 +914,7 @@ function collisionHandler(bullet,tile){
 	game.add.tween(py.scale).to({y:0.6,x:0.6},500).start();
 	*/
 
-	var andro= game.add.sprite(bv+4*inc,h-500,'android');
+	var andro= game.add.sprite(bv+4*inc,h-500,'backend');
 	andro.scale.setTo(0.2,0.2);
 	andro.anchor.setTo(0.5,0.5);
 	game.add.tween(andro).to({y:h-550},300).start();
@@ -1128,7 +1130,7 @@ function update(){
 	}
 	if(hero.x > 15350){
 		
-		game.add.tween(shakti).to({x:base5+600,y:h-610},100).start();
+		game.add.tween(shakti).to({x:base5+580,y:h-650},100).start();
 		game.add.tween(shakti_cup).to({x:base5+500,y:h-475},100).start();
 		//console.log("Shakti cup is here");
 
@@ -1137,25 +1139,29 @@ function update(){
 	
 	cupTweenDone =true;
 	
-	var cupTween1 = game.add.tween(cup1);
-	cupTween1.to({y:h-280},2000,Phaser.Easing.Bounce.Out, true);
+	// var cupTween1 = game.add.tween(cup1);
+	// cupTween1.to({y:h-280},2000,Phaser.Easing.Bounce.Out, true);
 	
-	var cupTween2 = game.add.tween(cup2);
-	cupTween2.to({y:h-340},2000,Phaser.Easing.Bounce.Out, true);
-	cupTween1.start();
-	cupTween2.start();
+	// var cupTween2 = game.add.tween(cup2);
+	// cupTween2.to({y:h-340},2000,Phaser.Easing.Bounce.Out, true);
+	// cupTween1.start();
+	// cupTween2.start();
 
 	}
 	if(hero.x > base5+1600 && hero.x <=base5+1700 && !cupTweenSecondDone){
 		cupTweenSecondDone=true;
 	
-	var cupTween3 = game.add.tween(cup3);
-	cupTween3.to({y:h-410},2000,Phaser.Easing.Bounce.Out, true);
-	cupTween3.start();
+	// var cupTween3 = game.add.tween(cup3);
+	// cupTween3.to({x:base5+500,y:h-475},1000,Phaser.Easing.Bounce.Out, true).start();
+	// //cupTween3.start();
 
-	var cupTween4 = game.add.tween(cup4);
-	cupTween4.to({y:h-410},2000,Phaser.Easing.Bounce.Out, true);
-	cupTween4.start();
+	// var cupTween4 = game.add.tween(cup4);
+	// cupTween4.to({y:h-470},2000,Phaser.Easing.Bounce.Out, true);
+	// cupTween4.start();
+
+	// var cupTween5 = game.add.tween(cup5);
+	// cupTween5.to({y:h-530},2000,Phaser.Easing.Bounce.Out, true);
+	// cupTween5.start();
 
 	}
 
@@ -1167,12 +1173,12 @@ function update(){
 		t.onComplete.add(function(){game.add.text(platformLength-185,h-370,"Thanks for\n Visiting !",style_white);},this);
 	
 	}
-	if(hero.x > 18000){
+	// if(hero.x > 18000){
 		
-		var t =game.add.tween(shakti2).to({y:h-450},100);
-		t.start();
-		t.onComplete.add(bounceFootball,this);
-	}
+	// 	var t =game.add.tween(shakti2).to({y:h-450},100);
+	// 	t.start();
+	// 	t.onComplete.add(bounceFootball,this);
+	// }
 
 	if(hero.x > base7+500){
 		game.add.tween(cloud_moving2).to({x:base7,alpha:0},5000).start();
@@ -1196,10 +1202,7 @@ function update(){
 	
 
 	if((bug.x - hero.x)<=100){
-		//game.add.tween(bug).to({x:bug.x},3000,Phaser.Easing.Linear.None).start();
-		//bug_tween.pause();
-		//bug.scale.setTo(1,0.2);
-		//console.log(bug.x - hero.x);
+	
 		bug.body.velocity.x = 0;
 
 
@@ -1225,17 +1228,20 @@ function update(){
 		var t = game.add.tween(hero).to({x:8700,y:h+300},300).start();
 		birds.alpha = 0;
 		hero.alpha = 0.6;
-			bubble.scale.setTo(0.5,0.5);
-			bubble.anchor.setTo(0.5, 0.5);
-			animateBubble();
+		bubble.scale.setTo(0.8,0.8);
+		bubble.anchor.setTo(0.8, 0.8);
+		bubble1.scale.setTo(0.8,0.8);
+		bubble1.anchor.setTo(0.8, 0.8);
+		bubble2.scale.setTo(0.8,0.8);
+		bubble2.anchor.setTo(0.8, 0.8);
+		bubble3.scale.setTo(0.8,0.8);
+		bubble3.anchor.setTo(0.8, 0.8);
+		bubble4.scale.setTo(0.8,0.8);
+		bubble4.anchor.setTo(0.8, 0.8);
+		bubble5.scale.setTo(0.8,0.8);
+		bubble5.anchor.setTo(0.8, 0.8);
+		animateBubble();
 		
-
-		//t.onComplete.add(function(){
-			//var t = game.add.tween(bubble).to({x:9100,y:h-50},300).start()},this);
-			
-			//bubble.anchor.setTo(bubble.width/2,bubble.height/2);
-			//t.onComplete.add(animateBubble,this);
-			
 	}
 
 	if(hero.x > 9250 && hero.x <9300 && hero.y > h &&direction!='left'){
@@ -1256,7 +1262,32 @@ function animateBubble(){
 
 				bubble.scale.setTo(0.75,0.75);
 				game.physics.enable(bubble,Phaser.Physics.ARCADE);
-				bubble.body.angularVelocity = 100;
+				bubble.body.angularVelocity = 50;
+
+				bubble1.scale.setTo(0.75,0.75);
+				game.physics.enable(bubble1,Phaser.Physics.ARCADE);
+				bubble1.body.angularVelocity = 100;
+
+				bubble2.scale.setTo(0.75,0.75);
+				game.physics.enable(bubble2,Phaser.Physics.ARCADE);
+				bubble2.body.angularVelocity = 50;
+
+				bubble3.scale.setTo(0.75,0.75);
+				game.physics.enable(bubble3,Phaser.Physics.ARCADE);
+				bubble3.body.angularVelocity =100;
+
+				bubble4.scale.setTo(0.75,0.75);
+				game.physics.enable(bubble4,Phaser.Physics.ARCADE);
+				bubble4.body.angularVelocity = 50;
+				
+				bubble5.scale.setTo(0.75,0.75);
+				game.physics.enable(bubble5,Phaser.Physics.ARCADE);
+				bubble5.body.angularVelocity = 100;
+
+
+
+
+
 }
 function moveBugLeft(){
 
@@ -1383,11 +1414,6 @@ function openleetcode(){
 }
 function openLinkedIn(){
  var win = window.open(linkedin_url);
- win.focus();
-}
-
-function openFacebook(){
- var win = window.open(facebook_url);
  win.focus();
 }
 
