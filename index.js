@@ -150,16 +150,6 @@ function preload(){
 }
 
 function create(){
-
-//	game.load.onLoadStart.add(loadStart, this);
-   // game.load.onFileComplete.add(fileComplete, this);
-  //  game.load.onLoadComplete.add(loadComplete, this);
-
-  //  game.stage.scale.startFullScreen();
-	//	game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL; //resize your window to see the stage resize too
-	//	game.stage.scale.setShowAll();
-	//	game.stage.scale.refresh();
-	//Add Bullets.
 		
 	//Add Clouds
 	for(var i=0;i<20000;i+=1000){
@@ -197,9 +187,7 @@ function create(){
     tiles.physicsBodyType = Phaser.Physics.ARCADE;
     tiles.createMultiple(6,'questionbrick');
     
-   text.setText("");
-   //touch = new Phaser.Touch();
-   //game.canvas.addEventListener('touchenter', function(){ console.log("You touched here!!");}, false);
+    text.setText("");
 
 	game.stage.backgroundColor =bgColor;
 	game.world.setBounds(0, 0,platformLength,h+800);
@@ -245,10 +233,8 @@ function create(){
 	ctext.alpha = 0.2;
 	game.add.text(5200,h-140,'LANGUAGE  ACTIVITY',style_roboto);
 
-	//Add BrickWall
-	/* This is an older brick wall  
-	game.add.tileSprite(6500,h-450,2000,400,'brick');
-	*/
+
+	
 	//Add Coin
 	var mustard_style = { font: "80px Roboto", fill: "#FFF", align: "center" };
 	codetext = game.add.text(6550,h-550,'C    D E =>',mustard_style);
@@ -335,34 +321,18 @@ function create(){
 
 	game.add.sprite(12750+350,h-100-36,'brick').scale.setTo(0.5,0.5);
 	game.add.sprite(12750+350,h-100,'brick').scale.setTo(0.5,0.5);
-	//game.add.sprite(12650,h-400,'treeS').alpha=0.8;
-	//game.add.sprite(12850,h-300,'treeS').scale.setTo(0.75,0.75);
 
-	//var water2 = game.add.tileSprite(12750,h-100-36+10,700,320,'waterAtlas2');
-//	water2.scale.setTo(0.5,0.5);
-	//var water = game.add.sprite(100,300,'waterAtlas');
 	water.animations.add('run');
 	water.animations.play('run',2,true);
 	
-	//water2.animations.add('run');
-//	water2.animations.play('run',2,true);
-	
-	
-
 
 	//Add trees
 
 	tree1 = game.add.sprite(130,h-100-0.75*430,'tree1');
 	tree1.scale.setTo(.75,.75);
-	//tree1.alpha = 0.5;	
-	//Add Main Banner
-	//var building = game.add.sprite(500,h-600,'building');
-	//building.scale.setTo(0.75,0.75);
-
+	
 
 	var banner = game.add.sprite(250,h-665,'intro');
-	//var banner = game.add.sprite(450,h-525,'akash');
-	//var banner = game.add.sprite(450,h-200-235,'introhouse');
 
 	//Add birds
 	birds = game.add.sprite(50,50,'birds');
@@ -527,24 +497,6 @@ function create(){
 
 	game.add.sprite(base5+3820,h-310,'icpc');
 	game.add.text(base5+3800,h-470,"Qualified for \nACM-ICPC \n2019",{font:"30px Arial",fill:"#fff",align:"center"});
-
-	//Add other highlights
-	//game.add.sprite(base6+600,h-240,'chai');
-	//game.add.text(base6+600,h-330,"Host:Chai Pe Charcha \n with NaMO & 'Mere \nSapno Ka Bharat'.",style_white);
-	//shakti2 = game.add.sprite(base6+930,-500,'pshaktiman');
-	//shakti2.scale.setTo(0.75,0.75);
-	//game.add.text(base6+900,h-430,"Sports Lover",style_white);
-	//football=game.add.sprite(base6+900,h-200,'football');
-	//game.add.tween(football).to( {y:h-300 }, 400, Phaser.Easing.Back.InOut, true, 0, 400, true);
-
-	
-	//game.add.sprite(base6+1200-30,h-550,'tree1');
-//	game.add.sprite(base6+1250+30,h-400,'treeS');
-//	game.add.sprite(base6+1200,h-450,'yoga');
-//	game.add.sprite(base6+1600,h-400,'swach_bharat');
-	//game.add.text(base6+1240,h-500,"Holds Yoga Session \nin DTU \n every Friday.",style_white);
-//	game.add.text(base6+1400+20,h-360,"Took active part in \n Swacch Bharat,Tree Plantation\n Drives in Delhi,Punjab,Karnataka.",style_white);
-
 	
 	//Add Contact Buttons
 	game.add.sprite(base7+600,h-400,'ladder');
@@ -603,15 +555,7 @@ function create(){
 	
 	game.add.button(base7+1260,h-450+20,'publication',openPublication,this);
 
-	//scale.setTo(0.15,0.15);
-
-	/*
-	button_leetcode = game.add.button(20600,h-600,'leetcode',openleetcode, this);
 	
-	button_linkedin = game.add.button(20400,h-400,'linkedin',openLinkedIn, this);
-	button_medium = game.add.button(20200,h-600,'medium',openmedium, this);
-	button_hackerearth = game.add.button(20000,h-600,'gfg',openHackerearth, this);
-	*/
 	//Add hometown
 	var hometown = game.add.sprite(1700,h-490,'hometown');
 
@@ -638,10 +582,6 @@ function create(){
 
 	game.add.text(8990,h+560,"Others Tools and Frameworks",style_roboto);
 	
-
-	//bubble.scale.setTo(0.5,0.5);
-	//bubble.alpha =0.8;
-
 	inst_text = game.add.text(290,h-50,"Use Arrow Keys/Screen keys >>",{font:"27px Arial",fill:"#fff"});
 	//Add hero 
 	hero = game.add.sprite(100,-500,'akash');
@@ -680,16 +620,6 @@ function create(){
     purpleFish.animations.play('swim');
     game.add.tween(purpleFish).to({ x:12750}, 7500, Phaser.Easing.Quadratic.InOut, true, 0, 1000, false);
 
-
-    // stingray = game.add.sprite(8900, h+90, 'seacreatures');
-
-    // stingray.animations.add('swim', Phaser.Animation.generateFrameNames('stingray', 0, 23, '', 4), 30, true);
-    // stingray.animations.play('swim');
-   /* 	
-    jellyfish = game.add.sprite(9100, h+20, 'seacreatures');
-    jellyfish.animations.add('swim', Phaser.Animation.generateFrameNames('blueJellyfish', 0, 32, '', 4), 30, true);
-    jellyfish.animations.play('swim');
-*/
     greenJellyfish = game.add.sprite(8800, h-150, 'seacreatures');
     greenJellyfish.animations.add('swim', Phaser.Animation.generateFrameNames('greenJellyfish', 0, 39, '', 4), 30, true);
     greenJellyfish.animations.play('swim');
@@ -698,15 +628,6 @@ function create(){
 
 	//Add School
 	var school = game.add.sprite(2200,h-575,'school');
-	//school.scale.setTo(1.2,1.2);
-
-	// var clg = game.add.sprite(3600,h-800,'dtu');
-	// clg.scale.setTo(1.2,1.2);
-
-	// var clg = game.add.sprite(4200,h-820,'florida');
-	// clg.scale.setTo(1,1);
-
-	
 //	hero tween
 	var entryTween = game.add.tween(hero);
  //	tween = game.add.tween(sprites.cursor).to( { x:100,y: 500 }, 2000, Phaser.Easing.Bounce.Out, true);
@@ -725,9 +646,6 @@ function create(){
 	bug = game.add.sprite(5900,h-150,'bug');
 	game.physics.arcade.enable(bug);
 
-//	hero.body.gravity.y=10000;
-	//hero.fixedToCamera = true;
-	//hero.body.angularVelocity = 10;
 	game.camera.follow(hero);
 	game.camera.follow(hero,Phaser.Camera.FOLLOW_PLATFORMER);
 	//Create Water Bubbles
@@ -743,19 +661,15 @@ function create(){
 	game.add.text(w-120,100,"Download PDF",{font:"10px Roboto",fill:"#000"}).fixedToCamera=true;
 	night_tween = game.add.tween(night);
 	night_tween.to({ alpha:0.5}, 10000)
-		//, Phaser.Easing.Quadratic.InOut, true, 0, 5000, true);
-	//back_btn.onTap.add(moveBack,this);
-	//Visible only for mobile screens
+
 	if(w<=481){
 		back_btn.alpha = 1;
 	}
 	
 	explosions = game.add.group();
     explosions.createMultiple(10, 'kaboom');
-   
 
 }
-
 
 function addMovingCoin(x,y,scale){
 	var moving_coin = game.add.sprite(x,y,'coin_moving');
@@ -765,7 +679,6 @@ function addMovingCoin(x,y,scale){
 	return moving_coin;
 	
 }
-
 
 function collisionHandler(bullet,tile){
    
@@ -1069,30 +982,12 @@ function update(){
 	if(hero.x > base5+800 && hero.x <=base5+900 && !cupTweenDone){
 	
 	cupTweenDone =true;
-	
-	// var cupTween1 = game.add.tween(cup1);
-	// cupTween1.to({y:h-280},2000,Phaser.Easing.Bounce.Out, true);
-	
-	// var cupTween2 = game.add.tween(cup2);
-	// cupTween2.to({y:h-340},2000,Phaser.Easing.Bounce.Out, true);
-	// cupTween1.start();
-	// cupTween2.start();
+
 
 	}
 	if(hero.x > base5+1600 && hero.x <=base5+1700 && !cupTweenSecondDone){
 		cupTweenSecondDone=true;
-	
-	// var cupTween3 = game.add.tween(cup3);
-	// cupTween3.to({x:base5+500,y:h-475},1000,Phaser.Easing.Bounce.Out, true).start();
-	// //cupTween3.start();
 
-	// var cupTween4 = game.add.tween(cup4);
-	// cupTween4.to({y:h-470},2000,Phaser.Easing.Bounce.Out, true);
-	// cupTween4.start();
-
-	// var cupTween5 = game.add.tween(cup5);
-	// cupTween5.to({y:h-530},2000,Phaser.Easing.Bounce.Out, true);
-	// cupTween5.start();
 
 	}
 
@@ -1104,12 +999,6 @@ function update(){
 		t.onComplete.add(function(){game.add.text(platformLength-185,h-370,"Thanks for\n Visiting !",style_white);},this);
 	
 	}
-	// if(hero.x > 18000){
-		
-	// 	var t =game.add.tween(shakti2).to({y:h-450},100);
-	// 	t.start();
-	// 	t.onComplete.add(bounceFootball,this);
-	// }
 
 	if(hero.x > base7+500){
 		game.add.tween(cloud_moving2).to({x:base7,alpha:0},5000).start();
@@ -1123,14 +1012,6 @@ function update(){
 		
 
 	}
-		//bug_tween = game.add.tween(bug).to({x:6550},3000,Phaser.Easing.Linear.None)
-		//bug_tween.start();
-		/*
-		
-    var tween = game.add.tween(hero).to( { x: [ 6000, 6200, 6400, 6600 ], y: [ h-250, h-400, h-400, h-250 ] },2000, "Sine.easeInOut", true, -1, false);
-    tween.interpolation(Phaser.Math.linearInterpolation);
-	*/
-	
 
 	if((bug.x - hero.x)<=100){
 	
@@ -1310,19 +1191,6 @@ function fileComplete(progress, cacheKey, success, totalLoaded, totalFiles) {
 
 	text.setText("File Complete: " + progress + "% - " + totalLoaded + " out of " + totalFiles);
 
-/*	var newImage = game.add.image(x, y, cacheKey);
-
-	newImage.scale.set(0.3);
-
-	x += newImage.width + 20;
-
-	if (x > 700)
-	{
-		x = 32;
-		y += 332;
-	}*/
-
-	//text.setText("Loading...");
 
 }
 
