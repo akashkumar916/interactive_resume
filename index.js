@@ -24,8 +24,8 @@ var medium_url="https://akash-kumar916.medium.com/";
 var hackerearth_url="https://www.hackerearth.com/@akash1043";
 var leetcode_url="https://leetcode.com/akash_kumar916/";
 var github_url="https://github.com/akashkumar916";
-var linkedin_url="https://linkedin.com/in/akash-kumra916";
-var resume_url="https://drive.google.com/file/u/1/d/1NvwPHNCfUPXlKTy51pPNpk3ZDD8YnnFt/view";
+var linkedin_url="https://linkedin.com/in/akash-kumar916";
+var resume_url="https://drive.google.com/file/d/15bNhr7I1Xr4aod0F-VX3pX28lyRLJB6i/view?usp=sharing";
 var website_url="https://akash-kumar916.medium.com/";
 var gmail_url="";
 var inst_text;
@@ -53,7 +53,6 @@ function preload(){
 	text.anchor.setTo(0.5,0.5);
 	//intro
 	game.load.image('intro','assets/img/intro.png');
-
 	game.load.image('download','assets/download2.png');
 	game.load.image('publication','assets/publication.png');
 	game.load.image('ground','assets/ground.png');
@@ -90,6 +89,8 @@ function preload(){
 	game.load.image('acko','assets/img/acko.png');
 	game.load.image('amazon','assets/img/amazon.png');
 	game.load.image('gfg','assets/img/gfg.png');
+    game.load.image('juniper','assets/img/juniper.png');
+    game.load.image('amd','assets/img/amd.png');
 //	game.load.image('campk12Logo','assets/img/amazon.png');
 	game.load.image('tekion','assets/img/tekion.png');
 	game.load.image('corel','assets/corel.png');
@@ -361,7 +362,7 @@ function create(){
 
 	game.add.sprite(base5+100,h-440,'level');
 	game.add.text(base5+170,h-340,"Level 5");
-	game.add.text(base5+240,h-260,"Achievements",{font:"25px Arial Black"});
+	game.add.text(base5+240,h-260,"Achievements",{font:"22px Arial Black"});
 
 
 	// game.add.sprite(base6+200,h-440,'level');
@@ -391,24 +392,30 @@ function create(){
 	}
 
 	//game.add.sprite(10000,h-330,'frog').scale.setTo(0.8,0.8);
-	game.add.sprite(10300,h-360,'frog').scale.setTo(0.9,0.9);
-	game.add.sprite(10600,h-385,'frog');
-	game.add.sprite(10900,h-450,'frog').scale.setTo(1.2,1.2);
-	game.add.sprite(11300,h-485,'frog').scale.setTo(1.3,1.3);
+	game.add.sprite(10100,h-360,'frog').scale.setTo(0.9,0.9);
+	game.add.sprite(10300,h-360,'frog').scale.setTo(1,1);
+	game.add.sprite(10500,h-360,'frog').scale.setTo(1.1,1.1);
+	game.add.sprite(10700,h-360,'frog').scale.setTo(1.2,1.2);
+    game.add.sprite(10900,h-360,'frog').scale.setTo(1.3,1.3);
+    game.add.sprite(11100,h-360,'frog').scale.setTo(1.4,1.4);
 
 	//Add logos
-	game.add.sprite(10280,h-230,'amazon');
-	game.add.sprite(10620,h-235,'gfg').scale.setTo(0.48,0.48);
-	game.add.sprite(10910,h-250,'acko');		
-	game.add.sprite(11320,h-300,'tekion').scale.setTo(0.6,0.6);
+	game.add.sprite(10105,h-230,'amazon');
+	game.add.sprite(10420,h-235,'gfg').scale.setTo(0.48,0.48);
+	game.add.sprite(10710,h-250,'acko');		
+	game.add.sprite(11050,h-300,'tekion').scale.setTo(0.5,0.5);
+    game.add.sprite(11320,h-300,'juniper').scale.setTo(0.5,0.5);
+    game.add.sprite(11600,h-300,'amd').scale.setTo(0.5,0.5);
 
 	//Add company texts.
 	var style_ex = {font:"16px Arial",fill:orange,align:"center"};
-	var style_exS = {font:"12px Arial",fill:orange,align:"center"};
-	game.add.text(10365,h-220,"Amazon, Delhi \n Sept - Oct'20 \n Software Developer Intern",style_exS);
-	game.add.text(10680,h-230,"GeekforGeeks\n Jul - Sep'20 \n Techincal Writer Intern",style_ex); 
-	game.add.text(10980,h-250,"Acko Technology,Bangalore \n Jul'21 - Nov'21 \n Software Engineer ",style_ex);
-	game.add.text(11390,h-290,"Tekion Corp, Bangalore \n Nov'21 - Present\n Associate Software Engineer",style_ex);
+	var style_exS = {font:"14px Arial",fill:orange,align:"center"};
+	game.add.text(10125,h-220,"Amazon \n Sept'20 - Oct'20 \n Software Developer Intern",style_exS);
+	game.add.text(10480,h-230,"GeekforGeeks\n Jul'20 - Sep'20 \n Techincal Writer Intern",style_ex); 
+	game.add.text(10780,h-250,"Acko Technology \n Jul'21 - Nov'21 \n Software Engineer ",style_ex);
+	game.add.text(11090,h-290,"Tekion Corp, Bangalore \n Nov'21 - Jul'23\n Associate Software Engineer",style_ex);
+    game.add.text(11390,h-290,"Juniper Networks, Sunnyvale, CA \n May'23 - Aug'23\n Software Engineer Intern",style_ex);
+    game.add.text(11500,h-290,"AMD, Austin, TX \n Jan'24 - May'24\n Software Engineer Intern",style_ex);
 
 	
 	
@@ -435,7 +442,7 @@ function create(){
 	//game.add.sprite(14800,h-420,'otherprojects');
 	//game.add.text(14850,h-450,"Other Projects",style_white);
 
-	//Add Achivements Section
+	//Add Acheivements Section
 	game.add.tileSprite(base5+500,h-100-73*3,139*2,73*3,'brick');
 	shakti = game.add.sprite(base5+700,-670,'maui');
 	//shakti.scale.setTo(0.7,0.7);
@@ -462,19 +469,6 @@ function create(){
 
 
 	game.add.sprite(base5+1630,h-465,'code1');
-	//game.add.text(base5+1580,h-250,"1st in Code Alchemist \nCoding\n Challenge",style_position);
-
-	
-
-	 //cup3=game.add.sprite(base5+2000,-410,'cup');
-	 //cup3.scale.setTo(0.8,0.8);
-	// game.add.sprite(base5+2060,h-410,'codelhi');
-	// game.add.text(base5+2080+50,h-310,"Hackathon",style_position);
-
-	// game.add.text(base5+2060,h-305+50,"1st in ",style_position);
-	// game.add.sprite(base5+2170,h-310+50,'shephertz');
-	// game.add.text(base5+2060,h-205+30,"1st in ",style_position);
-	// game.add.sprite(base5+2150,h-210+30,'gaana').scale.setTo(0.15,0.15);
 
 
 	//Add grari
@@ -571,6 +565,7 @@ function create(){
 	aieee_cup=game.add.sprite(3500,-500,'cup');
 //	game.add.text(4400,h-105," Master in Computer Science",style_roboto);
 	
+
 	//Add bubble
 	
 	bubble = game.add.sprite(8900,h+350,'sea1');
