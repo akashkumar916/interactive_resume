@@ -47,6 +47,7 @@ var touch;
 var direction = "left";
 var explosion_count = 0;
 var max_explosion_count=5;
+//preload
 function preload(){
 	 
 	text = game.add.text(w/2, h/2, "Loading...",{ font:"80px Roboto",fill: '#ffffff' });
@@ -89,8 +90,8 @@ function preload(){
 	game.load.image('acko','assets/img/acko.png');
 	game.load.image('amazon','assets/img/amazon.png');
 	game.load.image('gfg','assets/img/gfg.png');
-    game.load.image('juniper','assets/img/juniper.png');
-    game.load.image('amd','assets/img/amd.png');
+        game.load.image('juniper','assets/img/juniper.png');
+        game.load.image('amd','assets/img/amd.png');
 //	game.load.image('campk12Logo','assets/img/amazon.png');
 	game.load.image('tekion','assets/img/tekion.png');
 	game.load.image('corel','assets/corel.png');
@@ -209,9 +210,6 @@ function create(){
 	hill1=game.add.sprite(2600,h-300+400,'hill');
 	hill2=game.add.sprite(3000,h-350+400,'hill');
 
-	//hill3=game.add.sprite(3400,h-400+400,'hill');
-
-	
 	//Add Coco Trees
 	ct1  = game.add.sprite(5000,h,'cocotree');
 	ct2  = game.add.sprite(5200,h,'cocotree');
@@ -262,10 +260,6 @@ function create(){
 	for(xcoord = 7100;xcoord<=8200;xcoord += 2*119)
 	{
 		game.add.sprite(xcoord,h-450,'squarebrick');
-		//game.add.sprite(xcoord+119,h-450,'question_hide');
-		//game.add.sprite(xcoord+119,h-500,'kaboom');
-	    
-	  
 		//explosions.push(temp);
 		 tile = tiles.getFirstExists(false);
 		 if(tile){
@@ -393,19 +387,19 @@ function create(){
 
 	//game.add.sprite(10000,h-330,'frog').scale.setTo(0.8,0.8);
 	game.add.sprite(10100,h-360,'frog').scale.setTo(0.9,0.9);
-	game.add.sprite(10300,h-360,'frog').scale.setTo(1,1);
-	game.add.sprite(10500,h-360,'frog').scale.setTo(1.1,1.1);
-	game.add.sprite(10700,h-360,'frog').scale.setTo(1.2,1.2);
-    game.add.sprite(10900,h-360,'frog').scale.setTo(1.3,1.3);
-    game.add.sprite(11100,h-360,'frog').scale.setTo(1.4,1.4);
+	game.add.sprite(10500,h-340,'frog').scale.setTo(1,1);
+	game.add.sprite(10700,h-320,'frog').scale.setTo(1.1,1.1);
+	game.add.sprite(10900,h-300,'frog').scale.setTo(1.2,1.2);
+        game.add.sprite(11000,h-280,'frog').scale.setTo(1.3,1.3);
+       // game.add.sprite(11100,h-360,'frog').scale.setTo(1.4,1.4);
 
 	//Add logos
 	game.add.sprite(10105,h-230,'amazon');
 	game.add.sprite(10420,h-235,'gfg').scale.setTo(0.48,0.48);
 	game.add.sprite(10710,h-250,'acko');		
 	game.add.sprite(11050,h-300,'tekion').scale.setTo(0.5,0.5);
-    game.add.sprite(11320,h-300,'juniper').scale.setTo(0.5,0.5);
-    game.add.sprite(11600,h-300,'amd').scale.setTo(0.5,0.5);
+        game.add.sprite(11320,h-300,'juniper').scale.setTo(0.5,0.5);
+       //game.add.sprite(11600,h-300,'amd').scale.setTo(0.5,0.5);
 
 	//Add company texts.
 	var style_ex = {font:"16px Arial",fill:orange,align:"center"};
@@ -414,8 +408,8 @@ function create(){
 	game.add.text(10480,h-230,"GeekforGeeks\n Jul'20 - Sep'20 \n Techincal Writer Intern",style_ex); 
 	game.add.text(10780,h-250,"Acko Technology \n Jul'21 - Nov'21 \n Software Engineer ",style_ex);
 	game.add.text(11090,h-290,"Tekion Corp, Bangalore \n Nov'21 - Jul'23\n Associate Software Engineer",style_ex);
-    game.add.text(11390,h-290,"Juniper Networks, Sunnyvale, CA \n May'23 - Aug'23\n Software Engineer Intern",style_ex);
-    game.add.text(11500,h-290,"AMD, Austin, TX \n Jan'24 - May'24\n Software Engineer Intern",style_ex);
+        game.add.text(11390,h-290,"Juniper Networks, Sunnyvale, CA \n May'23 - Aug'23\n Software Engineer Intern",style_ex);
+        game.add.text(11500,h-290,"AMD, Austin, TX \n Jan'24 - May'24\n Software Engineer Intern",style_ex);
 
 	
 	
